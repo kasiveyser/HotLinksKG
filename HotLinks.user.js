@@ -14,23 +14,30 @@ divr.id = 'hotlinks';
 divr.class = 'navmenu';
 divr.innerHTML = "\
   <style>\
+  	.minwidth_container li a {text-decoration: none;}\
     #logo {display: none;}\
     #xrust.open {display:block;}\
-    #linki.open {border-top:1px solid black;}\
-    ul {float: left; display: inline-block; margin: 0; padding: 0;list-style: none;}\
+    #linki.open, #en.open, #adin.open {border-top:1px solid black;}\
+    #hotlinks ul {float: left; display: inline-block; margin: 0; padding: 0;list-style: none;}\
     #hotlinks {float: left;}\
     .navmenu li{display: inline-block;float: left;}\
-    #hotlinks li, #linki li, #xrust {display:none;}\
-    #linki.open li{display:inline-block;margin-bottom: 2px; padding-left: 6px;}\
+    #hotlinks li, #linki li, #xrust, #en li, #adin li {display:none;}\
+    #linki.open li, #en.open li, #adin.open li{display:inline-block;margin-bottom: 2px; padding-left: 6px;}\
   </style>\
     <span class='navmenu'>\
-	<ul class='kiber'><img src='http://www.dreamjordan.com/photo/2015/85447dreamjordan.com.png' alt='odin' height='50px'>\
+    <ul class='menu'><img src='http://donnaconcetta.com/StyleSheet/img/menu-mobile.png' alt='odin' height='50px'>\
+    </ul>\
+	<ul class='kiber'><img src='https://csdrive.srru.ac.th/55122420235/texture/text/k.png' alt='odin' height='50px'>\
 		<br><li><a href='http://klavogonki.ru/create/?gametype=voc&voc=35139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>МБ</a></li>\
         <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=40933&type=practice&level_from=1&level_to=9&timeout=5'>Ghost</a></li>\
 		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=16001&type=practice&level_from=1&level_to=9&timeout=5'>Радость</a></li>\
         <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=27969&type=practice&level_from=1&level_to=9&timeout=5'>Не тому</a></li>\
 	</ul>\
-    <ul class='xrust'><img src='http://www.leica-microsystems.com/typo3temp/_processed_/csm_LAS_X-Logo_03_0a4c9e31bd.png' alt='odin' height='50px'>\
+    <ul class='xrust'><img src='http://www.clker.com/cliparts/c/i/R/i/U/Y/letter-x-hi.png' alt='odin' height='50px'>\
+    </ul>\
+    <ul class='en'><img src='https://cdn2.iconfinder.com/data/icons/adobe-icons-professional/64/En.png' alt='odin' height='50px'>\
+    </ul>\
+    <ul class='adin'><img src='http://www.free-pictogram.com/wp-content/uploads/2011/01/21_yellow_black_1.png' alt='odin' height='50px'>\
     </ul>\
 	</span>";
 
@@ -73,6 +80,61 @@ list.insertBefore(divr, list.children[0]);
     titleElem.onclick = function() {
     //menuElem.classList.toggle('open');
     xrust.classList.toggle('open');
+    };
+
+    // En
+    divEn = document.createElement('div');
+    divEn.id = 'en';
+    divEn.innerHTML = "\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=62586&type=practice&level_from=1&level_to=9&timeout=5'>100</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=1432&type=practice&level_from=1&level_to=9&timeout=5'>част</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=63374&type=practice&level_from=1&level_to=9&timeout=5'>част2</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=731&type=practice&level_from=1&level_to=9&timeout=5'>250</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=31&type=practice&level_from=1&level_to=9&timeout=5'>500</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=5874&type=practice&level_from=1&level_to=9&timeout=5'>850</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=14878&type=practice&level_from=1&level_to=9&timeout=5'>short</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=5539&type=practice&level_from=1&level_to=9&timeout=5'>Обычный</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?gametype=voc&voc=100139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>HTML&CSS</a></li>\
+    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=64497&type=practice&level_from=1&level_to=9&timeout=5'>th, ch, sh</a></li>\
+    	<li><a href='#'>#</a></li>\
+		<li><a href='#'>#</a></li>";
+
+    var list = document.getElementsByClassName("minwidth_container")[0];
+    list.insertBefore(divEn, list.children[4]);
+    
+    var menuElem = document.getElementById('hotlinks');
+    var titleElem = menuElem.querySelector('.en');
+    var en = document.getElementById('en');
+    
+    titleElem.onclick = function() {
+    //menuElem.classList.toggle('open');
+    en.classList.toggle('open');
+    };
+
+		// adin
+    divEn = document.createElement('div');
+    divEn.id = 'adin';
+    divEn.innerHTML = "\
+		<li><a href='http://klavogonki.ru/create/?gametype=voc&voc=25856&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>100</a></li>\
+		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=192&type=practice&level_from=1&level_to=9&timeout=5'>част</a></li>\
+		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=931&type=practice&level_from=1&level_to=9&timeout=5'>ч2</a></li>\
+		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=935&type=practice&level_from=1&level_to=9&timeout=5'>ч3</a></li>\
+		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=1789&type=practice&level_from=1&level_to=9&timeout=5'>короткие</a></li>\
+		<li><a href='#'>#</a></li>\
+		<li><a href='#'>#</a></li>\
+		<li><a href='#'>#</a></li>\
+		<li><a href='#'>#</a></li>";
+
+    var list = document.getElementsByClassName("minwidth_container")[0];
+    list.insertBefore(divEn, list.children[4]);
+    
+    var menuElem = document.getElementById('hotlinks');
+    var titleElem = menuElem.querySelector('.adin');
+    var adin = document.getElementById('adin');
+    
+    titleElem.onclick = function() {
+    //menuElem.classList.toggle('open');
+    adin.classList.toggle('open');
     };
 };
 
