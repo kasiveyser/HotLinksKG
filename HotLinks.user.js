@@ -138,3 +138,17 @@ list.insertBefore(divr, list.children[0]);
     };
 };
 
+
+
+/* добавить стили для нав
+
+#logo{
+    display:none;
+}
+
+#head .right{
+    padding:0;
+}
+#head .right .menu {
+  margin: 0px 10px 0 0;
+}*/
