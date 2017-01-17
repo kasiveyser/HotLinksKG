@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name HotLinks
-// @description Ссылки заездов
-// @author kasiveyser
-// @license https://creativecommons.org/licenses/by-sa/4.0/
-// @version 1.0
+  // @name HotLinks
+  // @description Ссылки заездов
+  // @author kasiveyser
+  // @license https://creativecommons.org/licenses/by-sa/4.0/
+  // @version 1.0
 // @match http://klavogonki.ru/*
 // @grant none
 // ==/UserScript==
@@ -14,7 +14,7 @@ divr.id = 'hotlinks';
 divr.class = 'navmenu';
 divr.innerHTML = "\
   <style>\
-  	.minwidth_container li a {text-decoration: none;}\
+    .minwidth_container li a {text-decoration: none;}\
     #logo {display: none;}\
     #xrust.open {display:block;}\
     #linki.open, #en.open, #adin.open {border-top:1px solid black;}\
@@ -23,23 +23,31 @@ divr.innerHTML = "\
     .navmenu li{display: inline-block;float: left;}\
     #hotlinks li, #linki li, #xrust, #en li, #adin li {display:none;}\
     #linki.open li, #en.open li, #adin.open li{display:inline-block;margin-bottom: 2px; padding-left: 6px;}\
+    .bar {background: none}\
+    .minwidth_container {border-bottom: 1px solid rgba(0, 0, 0, 0.4);}\
+    .login-block {padding: 0 30px 0 0; position: absolute; top: 0px; width: 100%;}\
+    #head .right .menu a { transition: all ease 0.5s; text-decoration: none; color: #46810b; font-size: 14px; float: right; position: relative; display: block; padding: 17px 20px; text-align: center; width: auto; height: auto;}\
+    #head .right .menu a:hover {color: #46810b;background: rgba(0, 0, 0, 0.15);}\
+    #head .right .menu a.active {color: #e3039e; text-decoration: none; background: none;  margin-top: 0; padding-top: 17px;}\
+    #head .right {padding: 0;}\
+    #head .right .menu {margin: 0px 14px 0 0;}\
   </style>\
     <span class='navmenu'>\
     <ul class='menu'><img src='http://donnaconcetta.com/StyleSheet/img/menu-mobile.png' alt='odin' height='50px'>\
     </ul>\
-	<ul class='kiber'><img src='https://csdrive.srru.ac.th/55122420235/texture/text/k.png' alt='odin' height='50px'>\
-		<br><li><a href='http://klavogonki.ru/create/?gametype=voc&voc=35139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>МБ</a></li>\
+  <ul class='kiber'><img src='https://csdrive.srru.ac.th/55122420235/texture/text/k.png' alt='odin' height='50px'>\
+    <br><li><a href='http://klavogonki.ru/create/?gametype=voc&voc=35139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>МБ</a></li>\
         <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=40933&type=practice&level_from=1&level_to=9&timeout=5'>Ghost</a></li>\
-		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=16001&type=practice&level_from=1&level_to=9&timeout=5'>Радость</a></li>\
+    <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=16001&type=practice&level_from=1&level_to=9&timeout=5'>Радость</a></li>\
         <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=27969&type=practice&level_from=1&level_to=9&timeout=5'>Не тому</a></li>\
-	</ul>\
+  </ul>\
     <ul class='xrust'><img src='http://www.clker.com/cliparts/c/i/R/i/U/Y/letter-x-hi.png' alt='odin' height='50px'>\
     </ul>\
     <ul class='en'><img src='https://cdn2.iconfinder.com/data/icons/adobe-icons-professional/64/En.png' alt='odin' height='50px'>\
     </ul>\
     <ul class='adin'><img src='http://www.free-pictogram.com/wp-content/uploads/2011/01/21_yellow_black_1.png' alt='odin' height='50px'>\
     </ul>\
-	</span>";
+  </span>";
 
 var list = document.getElementsByClassName("minwidth_container")[0];
 list.insertBefore(divr, list.children[0]);
@@ -49,7 +57,7 @@ list.insertBefore(divr, list.children[0]);
     //div2.class = 'navmenu';
     div2.innerHTML = "<li><a href='http://klavogonki.ru/create/?gametype=voc&voc=35139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>МБ</a></li>\
         <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=40933&type=practice&level_from=1&level_to=9&timeout=5'>Ghost</a></li>\
-		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=16001&type=practice&level_from=1&level_to=9&timeout=5'>Радость</a></li>\
+    <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=16001&type=practice&level_from=1&level_to=9&timeout=5'>Радость</a></li>\
         <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=27969&type=practice&level_from=1&level_to=9&timeout=5'>Не тому</a></li>";
         
     var list = document.getElementsByClassName("minwidth_container")[0];
@@ -62,7 +70,7 @@ list.insertBefore(divr, list.children[0]);
     titleElem.onclick = function() {
     //menuElem.classList.toggle('open');
     linki.classList.toggle('open');
-	};
+  };
     
     // попытка впихнуть хрустлайн
     
@@ -86,18 +94,18 @@ list.insertBefore(divr, list.children[0]);
     divEn = document.createElement('div');
     divEn.id = 'en';
     divEn.innerHTML = "\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=62586&type=practice&level_from=1&level_to=9&timeout=5'>100</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=1432&type=practice&level_from=1&level_to=9&timeout=5'>част</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=63374&type=practice&level_from=1&level_to=9&timeout=5'>част2</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=731&type=practice&level_from=1&level_to=9&timeout=5'>250</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=31&type=practice&level_from=1&level_to=9&timeout=5'>500</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=5874&type=practice&level_from=1&level_to=9&timeout=5'>850</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=14878&type=practice&level_from=1&level_to=9&timeout=5'>short</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=5539&type=practice&level_from=1&level_to=9&timeout=5'>Обычный</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?gametype=voc&voc=100139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>HTML&CSS</a></li>\
-    	<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=64497&type=practice&level_from=1&level_to=9&timeout=5'>th, ch, sh</a></li>\
-    	<li><a href='#'>#</a></li>\
-		<li><a href='#'>#</a></li>";
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=62586&type=practice&level_from=1&level_to=9&timeout=5'>100</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=1432&type=practice&level_from=1&level_to=9&timeout=5'>част</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=63374&type=practice&level_from=1&level_to=9&timeout=5'>част2</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=731&type=practice&level_from=1&level_to=9&timeout=5'>250</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=31&type=practice&level_from=1&level_to=9&timeout=5'>500</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=5874&type=practice&level_from=1&level_to=9&timeout=5'>850</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=14878&type=practice&level_from=1&level_to=9&timeout=5'>short</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=5539&type=practice&level_from=1&level_to=9&timeout=5'>Обычный</a></li>\
+      <li><a href='http://klavogonki.ru/create/?gametype=voc&voc=100139&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>HTML&CSS</a></li>\
+      <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=64497&type=practice&level_from=1&level_to=9&timeout=5'>th, ch, sh</a></li>\
+      <li><a href='#'>#</a></li>\
+    <li><a href='#'>#</a></li>";
 
     var list = document.getElementsByClassName("minwidth_container")[0];
     list.insertBefore(divEn, list.children[4]);
@@ -111,19 +119,19 @@ list.insertBefore(divr, list.children[0]);
     en.classList.toggle('open');
     };
 
-		// adin
+    // adin
     divEn = document.createElement('div');
     divEn.id = 'adin';
     divEn.innerHTML = "\
-		<li><a href='http://klavogonki.ru/create/?gametype=voc&voc=25856&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>100</a></li>\
-		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=192&type=practice&level_from=1&level_to=9&timeout=5'>част</a></li>\
-		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=931&type=practice&level_from=1&level_to=9&timeout=5'>ч2</a></li>\
-		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=935&type=practice&level_from=1&level_to=9&timeout=5'>ч3</a></li>\
-		<li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=1789&type=practice&level_from=1&level_to=9&timeout=5'>короткие</a></li>\
-		<li><a href='#'>#</a></li>\
-		<li><a href='#'>#</a></li>\
-		<li><a href='#'>#</a></li>\
-		<li><a href='#'>#</a></li>";
+    <li><a href='http://klavogonki.ru/create/?gametype=voc&voc=25856&type=practice&level_from=1&level_to=9&timeout=5&submit=1'>100</a></li>\
+    <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=192&type=practice&level_from=1&level_to=9&timeout=5'>част</a></li>\
+    <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=931&type=practice&level_from=1&level_to=9&timeout=5'>ч2</a></li>\
+    <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=935&type=practice&level_from=1&level_to=9&timeout=5'>ч3</a></li>\
+    <li><a href='http://klavogonki.ru/create/?submit=1&gametype=voc&voc=1789&type=practice&level_from=1&level_to=9&timeout=5'>короткие</a></li>\
+    <li><a href='#'>#</a></li>\
+    <li><a href='#'>#</a></li>\
+    <li><a href='#'>#</a></li>\
+    <li><a href='#'>#</a></li>";
 
     var list = document.getElementsByClassName("minwidth_container")[0];
     list.insertBefore(divEn, list.children[4]);
@@ -141,14 +149,13 @@ list.insertBefore(divr, list.children[0]);
 
 
 /* добавить стили для нав
-
 #logo{
     display:none;
 }
-
 #head .right{
     padding:0;
 }
 #head .right .menu {
   margin: 0px 10px 0 0;
-}*/
+  }*/
+
